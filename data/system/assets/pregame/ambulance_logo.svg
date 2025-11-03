@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="titleDesc">
+  <title id="titleDesc">Ambulance logo</title>
+  <desc>Stylized ambulance with red cross and blue siren</desc>
+
+  <!-- Background circle (optional badge) -->
+  <circle cx="256" cy="256" r="250" fill="#ffffff" stroke="#e6e9ee" stroke-width="4"></circle>
+
+  <!-- Ambulance body -->
+  <g transform="translate(40,120)">
+    <!-- main box -->
+    <rect x="0" y="60" width="360" height="140" rx="18" ry="18" fill="#fff" stroke="#1f2937" stroke-width="6"></rect>
+    <!-- cab -->
+    <rect x="240" y="0" width="120" height="140" rx="12" ry="12" fill="#fff" stroke="#1f2937" stroke-width="6"></rect>
+    <!-- stripe -->
+    <rect x="10" y="120" width="340" height="18" rx="9" ry="9" fill="#ef4444"></rect>
+    <!-- windows -->
+    <rect x="260" y="18" width="80" height="44" rx="6" ry="6" fill="#e6f0fa" stroke="#1f4b8f" stroke-width="3"></rect>
+    <rect x="265" y="30" width="28" height="28" rx="4" ry="4" fill="#dbeeff"></rect>
+    <rect x="299" y="30" width="36" height="28" rx="4" ry="4" fill="#dbeeff"></rect>
+
+    <!-- front bumper / grille -->
+    <rect x="352" y="60" width="8" height="40" fill="#1f2937"></rect>
+    <rect x="342" y="60" width="8" height="40" fill="#374151"></rect>
+    <rect x="332" y="60" width="8" height="40" fill="#4b5563"></rect>
+
+    <!-- red cross on side -->
+    <g transform="translate(60,80)">
+      <rect x="0" y="22" width="80" height="36" rx="6" ry="6" fill="#ef4444"></rect>
+      <rect x="22" y="0" width="36" height="80" rx="6" ry="6" fill="#ef4444"></rect>
+      <!-- slight white border -->
+      <rect x="-4" y="-4" width="88" height="88" rx="8" ry="8" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.6"></rect>
+    </g>
+
+    <!-- wheels -->
+    <g>
+      <circle cx="90" cy="220" r="36" fill="#111827"></circle>
+      <circle cx="90" cy="220" r="20" fill="#9ca3af"></circle>
+      <circle cx="300" cy="220" r="36" fill="#111827"></circle>
+      <circle cx="300" cy="220" r="20" fill="#9ca3af"></circle>
+    </g>
+
+    <!-- siren -->
+    <g transform="translate(200,-28)">
+      <rect x="0" y="0" width="80" height="24" rx="8" ry="8" fill="#1f2937"></rect>
+      <rect x="6" y="-10" width="28" height="18" rx="6" ry="6" fill="#3b82f6"></rect>
+      <rect x="46" y="-10" width="28" height="18" rx="6" ry="6" fill="#60a5fa"></rect>
+      <!-- light rays -->
+      <path d="M-6,-4 C-36,-30 -36,34 -6,10" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.35"></path>
+      <path d="M86,-4 C116,-30 116,34 86,10" fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.35"></path>
+    </g>
+
+    <!-- outline shadow -->
+    <path d="M0 200 Q 180 260 360 200" fill="#000000" opacity="0.06"></path>
+  </g>
+
+  <!-- small label (optional) -->
+  <text x="256" y="480" font-family="Segoe UI, Roboto, Arial" font-size="18" fill="#374151" text-anchor="middle">AMBULANCE</text>
+</svg>

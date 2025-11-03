@@ -1,5 +1,5 @@
 use std::collections::BTreeMap;
-
+use rand::thread_rng;
 use rand::seq::SliceRandom;
 use rand::{Rng, SeedableRng};
 use rand_xorshift::XorShiftRng;
@@ -286,6 +286,15 @@ pub fn bio(
     ])
 }
 
+fn generate_name(word_list: &[&str], count: usize, separator: &str, rng: u64) -> String {
+    let mut rng = rand::rngs::StdRng::seed_from_u64(rng); // fixed seed
+    (0..count)
+        .map(|_| word_list.choose(&mut rng).unwrap())
+        .cloned()
+        .collect::<Vec<&str>>()
+        .join(separator)
+}
+
 fn bio_body(ctx: &mut EventCtx, app: &App, details: &mut Details, id: PersonID) -> Widget {
     let mut rows = vec![];
     let person = app.primary.sim.get_person(id);
@@ -298,7 +307,22 @@ fn bio_body(ctx: &mut EventCtx, app: &App, details: &mut Details, id: PersonID) 
     let batch = batch.scale((200.0 / dims.width).min(200.0 / dims.height));
     rows.push(batch.into_widget(ctx).centered_horiz());
 
-    let nickname = petname::Petnames::default().generate(&mut rng, 2, " ");
+    let words = vec![
+       "joko",
+    "prabs",
+    "susilo",
+    "mega",
+    "gus",
+    "dur",
+    "subi",
+    "bams",
+    "wi"
+    ];
+
+    // Create a Petnames generator using your word list
+
+
+    let nickname = generate_name(&words, 2, " ",id.0 as u64);
     let age = rng.gen_range(5..100);
 
     let mut table = vec![("Nickname", nickname), ("Age", age.to_string())];
